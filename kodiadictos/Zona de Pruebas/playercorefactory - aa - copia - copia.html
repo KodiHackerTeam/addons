@@ -1,0 +1,57 @@
+<!-- CREADO POR KODIADICTOS -->
+<!-- https://kodiadictos.com -->
+
+<playercorefactory>
+	<players>
+		<!--DVD-->
+		<player name="VIDEOPlayer" type="InternalPlayer" audio="false" video="true">
+		    <!-- Android -->
+			<filename>org.xbmc.kodi</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>
+        <!--VLC-->
+		<player name="VLCPlayer" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>org.videolan.vlc</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>	
+        <!--MXPLAYER-->
+		<player name="MXPlayerFree" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>com.mxtech.videoplayer.ad</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>	
+        <!--WISE-->
+		<player name="WISEPlay" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>com.wiseplay</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>	
+    </players> 
+					
+	<!-- REGLAS -->
+
+	<rules action="https://kodiadictos.com/kodiadictos/Zona de Pruebas/prepend">
+
+	<!-- Archivos Biblioteca de 720p y 1080p -->
+		<rule videoresolution="720|1080" player="VIDEOPlayer""MXPlayerFree""VLCPlayer""WISEPlay"/>
+		
+	<!-- Archivos SAMBA -->
+		<rule protocols="smb" player=/>"VIDEOPlayer""MXPlayerFree""VLCPlayer""WISEPlay"
+
+	<!-- Streams HTTP y Contenido Online -->
+		<rule protocols="http" player="VIDEOPlayer""MXPlayerFree""VLCPlayer""WISEPlay"/>
+		
+	<!-- Streams RTMP, RTSP -->
+		<rule protocols="rtmp" player="VIDEOPlayer""MXPlayerFree""VLCPlayer""WISEPlay"/>
+		<rule protocols="rtsp" player="VIDEOPlayer""MXPlayerFree""VLCPlayer""WISEPlay"/>
+			
+	<!-- DVD -->
+		<rule dvdimage="true" player="VIDEOPlayer""MXPlayerFree""VLCPlayer""WISEPlay"/>
+			
+	</rules>
+</playercorefactory>

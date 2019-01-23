@@ -1,0 +1,46 @@
+<!-- CREADO POR KODIADICTOS -->
+<!-- https://kodiadictos.com -->
+
+<playercorefactory>
+	<players>
+		<!--DVD-->
+		<player name="DVDPLAYER" type="ExternalPlayer" audio="false" video="true">
+		    <!-- Android -->
+			<filename>org.xbmc.kodi</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>
+        <!--VLC-->
+		<player name="VLCPlayer" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>org.videolan.vlc</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>	
+        <!--MXPLAYER-->
+		<player name="MXPlayerFree" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>com.mxtech.videoplayer.ad</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>	
+        <!--WISE-->
+		<player name="WISEPlay" type="ExternalPlayer" audio="false" video="true">
+			<!-- Android -->
+			<filename>com.wiseplay</filename>
+			<hidexbmc>true</hidexbmc>
+			<playcountminimumtime>120</playcountminimumtime>
+		</player>	
+    </players> 
+					
+	<!-- REGLAS -->
+
+	<rules action="https://kodiadictos.com/kodiadictos/Zona de Pruebas/prepend">
+
+	<rule filetypes = "mkv | avi | divx | ogm | mp4 | mov | m4v | flv | m2v | mpeg | mpg | mts | m2ts | vob | bdmv | iso" player = "DVDPLAYER">
+    <ruleocols = "http | https" player = "DVDPLAYER" /> 
+    <ruleocols = "daap | rtv | rtsp | rtmp | rtmpe | rtsp | mms | rtp | pvr" player = "DVDPLAYER" />
+	<ruleocols = "4k" = "MXPlayerFree" />
+    </ Rule> 
+    </rules> 
+</playercorefactory> 
